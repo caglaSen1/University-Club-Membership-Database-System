@@ -1,0 +1,78 @@
+===========Logir page ================
+
+===for admin===
+username = admin
+password = admin
+
+
+===== for normal user ============
+username = ali2022
+password = ali2022
+
+
+
+
+======================================================================================================================
+other users 
+*usernames*     *password*
+ayse2022	ayse2022
+melisa2022	melisa2022
+poyraz22	poyraz22
+salih2022	salih2022
+yasemin2022	yasemin2022
+
+======================================To use with other usernames please apply these 2 steps===========================
+
+
+
+#1 please uncomment the following code in Login.cs file
+
+
+/*
+            //to-do check login username and password
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\uni_club_membership.mdf;Integrated Security=True");
+            SqlDataAdapter sda = new SqlDataAdapter(@"select * 
+            FROM[uni_club_membership].users
+            where username = '"+ userName.Text +"'and password ='"+ password.Text +"'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                if (userName.Text == "admin")
+                {
+                    ControlForm cf = new ControlForm();
+                    cf.Show();
+                    this.Hide();
+                }
+              else
+                {
+                    HomePage main = new HomePage();
+                    main.Show();
+                    this.Hide();
+                }
+                
+            } else
+            {
+                MessageBox.Show("Wrong username or password..!","Error",MessageBoxButtons.OK, MessageBoxIcon.Error );
+               
+                clrBtn(sender, e);
+            }*/
+
+#2 replace the path in this following code with your local path because this page is using table in the database that which we added LOCALLY (LocalDB)
+
+ replace this : SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\uni_club_membership.mdf;Integrated Security=True");
+ with this    :SqlConnection con = new SqlConnection(@"Data Source=<local pat>h"); (putting your code is <>)
+
+
+
+
+
+
+
+
+
+
+
+
+
